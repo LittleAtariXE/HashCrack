@@ -1,0 +1,2 @@
+art==6.2
+termcolor==2.4.0
