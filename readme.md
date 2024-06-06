@@ -30,9 +30,20 @@
     <br/>
     <br/>
     <div id="description">
+        <h2>Description</h2>
         <p><strong>Hash Crack</strong> is a Python-based tool designed to crack password hashes using a dictionary attack. The program allows for simultaneous cracking of multiple hashes by leveraging multi-core processing; for instance, if you have 3 CPU cores, it will compare 3 hashes concurrently. After the process is complete, a report of the cracked hashes will be generated in the "output" directory.</p>
         <p>Hash Crack also supports the merging of multiple dictionaries into a single large dictionary to facilitate comprehensive password testing.</p>
         <p><strong>IMPORTANT!!</strong> If you find a password that you use within any of the dictionary lists, change it immediately. This indicates that the password has likely been compromised for a long time, and this tool demonstrates just how easily it can be cracked.</p>
+    </div>
+    <div id="key-features">
+        <h2>Key Features</h2>
+        <ul>
+            <li><strong>Multi-Hash Cracking:</strong> Ability to crack several hashes concurrently, utilizing multiple CPU cores for efficiency.</li>
+            <li><strong>Supported Hash Algorithms:</strong> Includes support for a wide range of hash algorithms, such as SHA-256, MD5, SHA3-256, and many more.</li>
+            <li><strong>Customizable Parameters:</strong> Allows customization of encoding formats and the number of processing cores used.</li>
+            <li><strong>Dictionary Attack:</strong> Utilizes dictionary files to perform attacks, and supports merging multiple dictionaries for comprehensive testing.</li>
+            <li><strong>Real-Time Reporting:</strong> Generates a report in real-time, updating with each cracked hash.</li>
+        </ul>
     </div>
     <div id="requirements">
         <h2>Requirements</h2>
