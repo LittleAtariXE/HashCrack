@@ -48,9 +48,9 @@
         <p>To install the tool, follow these steps:</p>
         <ol>
             <li>Clone the repository:</li>
-            <pre><code>git clone https://github.com/yourusername/your-repo.git</code></pre>
+            <pre><code>git clone https://github.com:LittleAtariXE/HashCrack.git</code></pre>
             <li>Navigate to the project directory:</li>
-            <pre><code>cd your-repo</code></pre>
+            <pre><code>cd HashCrack</code></pre>
             <li>Install the required dependencies:</li>
             <pre><code>pip install -r requirements.txt</code></pre>
         </ol>
