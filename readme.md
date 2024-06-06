@@ -26,6 +26,7 @@
         <a href="#menu">Menu</a> &nbsp;|&nbsp;
         <a href="#supported-algorithms">Supported Algorithms</a> &nbsp;|&nbsp;
         <a href="#summary">Summary</a> &nbsp;|&nbsp;
+        <a href="#passwords">Passwords List</a> &nbsp;|&nbsp;
     </div>
     <br/>
     <br/>
@@ -129,5 +130,9 @@
             <li>Dictionary Attack</li>
         </ul>
         <p>Use the program for educational purposes and fun. Do not crack other users' passwords!</p>
+    </div>
+    <div id="passwords">
+        <h2>Few Password List</h2>
+        <a href="https://github.com/LittleAtariXE/Passwords-List">Password List</a>
     </div>
 </body>
