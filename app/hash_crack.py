@@ -11,6 +11,7 @@ from .tools.config import MrConfig
 from .tools.loader import Loader
 from .tools.cracker import Cracker
 from .tools.supervisor import SuperVisor
+from .tools.brutus import Brutus, BruteForce
 
 
 
@@ -20,6 +21,7 @@ class HashCrack:
         self.config = MrConfig(self, **kwargs)
         self.Loader = Loader(self)
         self.SuperVisor = SuperVisor(self)
+        self.Brutus = Brutus(self)
         self.makeDirs()
         self.text_name = text2art("<-- Hash Crack -->")
         self.working = False
@@ -69,6 +71,7 @@ class HashCrack:
             cprint("-- [7] -- Show avaible algorithms", "blue")
             cprint("-- [8] -- Change hash algorithms", "blue")
             cprint("-- [9] -- Start Dictionary Attack", "blue")
+            cprint("-- [0] -- Preapre Brute Force Attack", "blue")
             cprint("-- [q] -- Exit Program", "blue")
             cmd = input("<<< ")
             match cmd:
@@ -90,6 +93,8 @@ class HashCrack:
                     self.changeHashAlgMenu()
                 case "9":
                     self.dictAttack()
+                case "0":
+                    self.bruteMenu()
                 case _:
                     pass
 
@@ -188,6 +193,25 @@ class HashCrack:
         while self.SuperVisor.is_working():
             sleep(1)
         cprint("All Jobs Done !!! Check output file.", "green")
+    
+    @menuDecor
+    def bruteMenu(self) -> None:
+        self.Brutus.prepareCombo()
+        if not self.Brutus.check():
+            return
+        if len(self.hashes) < 1:
+            cprint("[!!] Can not perform attack. No hashes loaded [!!]", "red")
+            return
+        cprint("!!!!! START ATTACK !!!!!!", "blue")
+        for index, h_pass in enumerate(self.hashes):
+            brute = BruteForce(f"Brutus_no{index}", self, self.Brutus.combos, self.Brutus.combo_hit, h_pass[1], self.crack_alg, h_pass[0])
+            if not brute.prepareAttack():
+                continue
+            self.SuperVisor.addTask(brute)
+        while self.SuperVisor.is_working():
+            sleep(1)
+        cprint("All Jobs Done !!! Check output file.", "green")   
+
 
         
     

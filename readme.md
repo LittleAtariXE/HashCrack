@@ -27,6 +27,7 @@
         <a href="#supported-algorithms">Supported Algorithms</a> &nbsp;|&nbsp;
         <a href="#summary">Summary</a> &nbsp;|&nbsp;
         <a href="#passwords">Passwords List</a> &nbsp;|&nbsp;
+        <a href="#changelog">Changelog</a> &nbsp;|&nbsp;
     </div>
     <br/>
     <br/>
@@ -43,6 +44,7 @@
             <li><strong>Supported Hash Algorithms:</strong> Includes support for a wide range of hash algorithms, such as SHA-256, MD5, SHA3-256, and many more.</li>
             <li><strong>Customizable Parameters:</strong> Allows customization of encoding formats and the number of processing cores used.</li>
             <li><strong>Dictionary Attack:</strong> Utilizes dictionary files to perform attacks, and supports merging multiple dictionaries for comprehensive testing.</li>
+            <li><strong>Bruteforce Attack:</strong> Allows you to build your own combination for attacks, enhancing the tool's flexibility and power.</li>
             <li><strong>Real-Time Reporting:</strong> Generates a report in real-time, updating with each cracked hash.</li>
         </ul>
     </div>
@@ -95,6 +97,11 @@
             </li>
             <li><code>output</code> - This directory will contain the report file of the cracked hashes. The file can be checked in real-time and is updated after each hash is cracked.</li>
         </ul>
+         <p>When you choose the "Prepare Brute Force Attack" option, you will be able to select the combination of characters used for the attack. The next option is the number of characters used in the attack, and there are two possibilities:</p>
+        <ul>
+            <li>Providing a single number, e.g., 3 - This will build passwords starting from one character and ending at the number you provided. For example, from 'a' to 'zzz'.</li>
+            <li>Providing a "$" sign before the number, e.g., $3 - This will build passwords exactly with that number of characters. For example, from 'aaa' to 'zzz'.</li>
+         </ul>
     </div>
     <div id="supported-algorithms">
         <h2>Supported Hash Algorithms</h2>
@@ -128,11 +135,18 @@
         <p>Available attack modes:</p>
         <ul>
             <li>Dictionary Attack</li>
+            <li>BruteForce Attack</li>
         </ul>
         <p>Use the program for educational purposes and fun. Do not crack other users' passwords!</p>
     </div>
     <div id="passwords">
         <h2>Few Password List</h2>
         <a href="https://github.com/LittleAtariXE/Passwords-List">Password List</a>
+    </div>
+        <div id="changelog">
+        <h2>Changelog</h2>
+        <ul>
+            <li><strong>ver 1.1</strong> - Added the option to build a BruteForce attack. Added additional information in the "report" files.</li>
+        </ul>
     </div>
 </body>

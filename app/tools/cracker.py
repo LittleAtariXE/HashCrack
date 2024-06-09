@@ -48,6 +48,7 @@ class Cracker(Process):
             report += "NO LOGIN\n"
         report += f"Hash {self.__method}: {self.hash_pass}\n"
         report += f"Working Time: {round(self.done_time, 2)} sec.\n"
+        report += "Attack Type: Dictionary Attack\n"
         report += f"Number of passwords: {len(self.pass_list)}\n"
         report += "*" * 80 + "\n"
         with self.lock:
